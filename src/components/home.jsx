@@ -6,7 +6,8 @@ import { Link } from "react-router-dom"
     name:"",
     fatherName:"",
     email:"",
-    dateOfBirth:""
+    dateOfBirth:"",
+    gender:""
 })
 const handleChange=(e)=>{
 const {name,value} = e.target
@@ -24,6 +25,7 @@ function Submit(e){
 console.log(Detail)
 getData.push(Detail);
 localStorage.setItem("details",JSON.stringify(getData))
+alert("your data is add")
 
 }
      
@@ -33,7 +35,7 @@ return(
     
   <div className="form-div">
     <div className="head-div">
-      <h1>STUDENT FORM</h1>
+      <h1>FORM</h1>
     </div>
     <div className="input-div">
       <label htmlFor="name">Name:</label>
@@ -58,16 +60,16 @@ return(
     <div className="input-div">
       <label htmlFor="gender">Gender:</label>
       <br />
-      <input type="radio" name="gender" onChange={handleChange}/>
+      <input type="radio" value="male" name="gender" onChange={handleChange}/>
       Male
-      <input type="radio" name="gender" onChange={handleChange}/>
+      <input type="radio" value="female" name="gender" onChange={handleChange}/>
       Female
     </div>
     <div className="btn-div">
       <button className="btn" onClick={Submit} >Submit</button>
       <button className="btn-check">
     <Link to="/data"> 
-    check
+    check Details
     </Link>
     </button>
     </div>

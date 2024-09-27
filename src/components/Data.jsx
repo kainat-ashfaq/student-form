@@ -28,11 +28,11 @@ function Data(){
         {
 userData.map((det,index)=>(
     <tr key={index}>
-        <td>{det.name}</td>
-        <td>{det.fatherName}</td>
+        <td className="names">{det.name}</td>
+        <td className="names">{det.fatherName}</td>
         <td>{det.email}</td>
         <td>{det.dateOfBirth}</td>
-        <td>{det.gender}</td>
+        <td className="names">{det.gender}</td>
     </tr>
 ))
 
